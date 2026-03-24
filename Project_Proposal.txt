@@ -1,0 +1,68 @@
+Machine Learning Analysis of Housing Price Predictors
+
+1. Title and Team Information
+Project Title: Machine Learning Analysis of Housing Price Predictors
+Team Members: Alena Mary (amt325), James Booth (jpb302)
+
+2. Research Question, Context, and Motivation
+Research Question: Which housing features are the most important predictors of housing prices,
+and how accurately can machine learning models predict sale prices using these features?
+Context: Housing prices are influenced by factors such as property size, number of bedrooms
+and bathrooms, neighborhood, and other structural characteristics. Large real estate datasets like
+the Ames Housing dataset provide detailed information on these features, enabling data-driven
+analysis. Machine learning allows identification of patterns and relationships that are difficult to
+detect using traditional methods.
+Motivation: Determining the most influential features is valuable for buyers, sellers, real estate
+professionals, and policymakers. Accurate predictions support better financial decisions and provide
+insight into market trends. This project applies data science techniques to identify key property
+characteristics affecting housing prices, highlighting the relative contribution of structural, physical,
+and location-based attributes.
+
+3. Data Sources
+
+Dataset Description: We will use the House Prices: Advanced Regression Techniques
+dataset from Kaggle, containing 79 explanatory variables describing structural, physical, and
+location-based characteristics such as lot size, living area, number of bedrooms and bathrooms, year
+built, neighborhood, and garage features. The target variable is SalePrice, representing the sale
+price in dollars. Due to right-skewness, we may apply a log-transformation to improve linear model
+performance. Dataset link: https://www.kaggle.com/competitions/house-prices-advanced-regression-tec
+data.
+Data Collection and Preprocessing: The dataset will be downloaded as a CSV and loaded
+into Python using Pandas. Initial inspection includes checking variable types, missing values, and
+summary statistics. Missing numerical values will be imputed with the mean or median, and
+missing categorical values will be filled with the most frequent category. Categorical variables
+will be converted using one-hot encoding. Continuous variables may be scaled as needed. After
+prepreprocessing, the dataset will be split into training and testing sets.
+Potential Challenges: High-cardinality categorical variables can increase dimensionality after
+encoding. Some variables contain missing values that require careful handling. Multicollinearity
+may occur between related features (e.g., Garage Cars vs. Garage Area), and the large number
+of features relative to observations could lead to overfitting. These challenges will be mitigated
+through preprocessing, feature selection, and regularized modeling.
+
+4. Methodology and Analysis Plan
+We will begin with Exploratory Data Analysis (EDA) to examine feature distributions, relationships with housing prices, 
+and potential multi-collinearity using correlation heatmaps. Outliers and skewed features will be addressed, and a 
+log-transformation of SalePrice will be applied if necessary.
+Python will be used for the entire workflow. Pandas will handle data loading, inspection, and
+manipulation, including selecting columns, filtering rows, and merging or reshaping data as needed.
+NumPy will be used for numerical operations such as calculating summary statistics, applying
+log-transformations, and performing vectorized operations for feature scaling. During EDA, we will
+use Pandas and NumPy to compute correlations, means, medians, and variances, which will help
+guide feature selection and identify potential data quality issues.
+Modeling will start with a baseline Linear Regression to establish a benchmark. Regularized models
+(Lasso and Ridge regression) will be applied to manage high dimensionality and perform automatic
+feature selection. Finally, a Random Forest Regressor will capture non-linear interactions and
+provide feature importance rankings.
+Model performance will be evaluated primarily using RMSE on log-transformed prices, with MAE
+as a secondary metric for interpretability. Matplotlib and Seaborn will be used to visualize feature
+distributions, correlations, and model predictions.
+
+5. Expected Outcomes and Evaluation
+We expect to produce predictive models capable of estimating housing prices based on property
+features and identifying the most influential predictors. Features such as living area, overall quality,
+and neighborhood are anticipated to be key drivers, while minor structural features may have
+smaller effects. RMSE on the log-transformed target will serve as the primary metric, providing
+a standard benchmark, and MAE will offer interpretability of prediction errors. This work will
+offer insights into how housing characteristics affect value and demonstrate practical application of
+machine learning. Future extensions may include incorporating additional datasets, geographic or
+socioeconomic variables, or advanced modeling techniques to improve accuracy and interpretability.
