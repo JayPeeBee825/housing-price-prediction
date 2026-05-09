@@ -4,7 +4,6 @@ CS439 Final Project: Housing Price Prediction
 Goal: Predict housing sale prices and identify which features are most important.
 Uses the Ames Housing dataset with multiple regression models for comparison.
 """
-
 import pandas as pd 
 import numpy as np 
 import matplotlib.pyplot as plt 
@@ -18,12 +17,10 @@ from sklearn.preprocessing import StandardScaler
 def evaluate_model(y_true: pd.Series, y_pred: np.ndarray, model_name: str) -> dict:
     """
     Evaluates regression model performance using RMSE and MAE.
-
     Args:
         y_true (pd.Series): Actual target variable values.
         y_pred (np.ndarray): Model predictions of target variable values.
         model_name (str): Name of the model.
-
     Returns:
         dict: Dictionary with 'rmse' and 'mae' keys.
     """
@@ -34,7 +31,6 @@ def evaluate_model(y_true: pd.Series, y_pred: np.ndarray, model_name: str) -> di
     print(f"\tMAE: {mae:.4f}")
     print()
     return {"rmse": rmse, "mae": mae}
-
 
 def preprocess_data(df: pd.DataFrame, medians: pd.Series | None = None) -> tuple[pd.DataFrame, pd.Series]:
     """
@@ -108,10 +104,10 @@ def train_models(x_train, x_test, x_train_scaled, x_test_scaled, y_train) -> dic
         dict: model name -> (fitted model, predictions)  pairs.
     """
     models = {
-        "Linear Regression":    (LinearRegression(), x_train_scaled, x_test_scaled),
-        "Ridge":                (Ridge(alpha = 1.0), x_train_scaled, x_test_scaled),
-        "Lasso":                (Lasso(alpha = 0.001), x_train_scaled, x_test_scaled),
-        "Random Forest":        (RandomForestRegressor(n_estimators = 100, random_state = 42), x_train, x_test),
+        "Linear Regression": (LinearRegression(), x_train_scaled, x_test_scaled),
+        "Ridge": (Ridge(alpha = 1.0), x_train_scaled, x_test_scaled),
+        "Lasso": (Lasso(alpha = 0.001), x_train_scaled, x_test_scaled),
+        "Random Forest": (RandomForestRegressor(n_estimators = 100, random_state = 42), x_train, x_test),
     }
     results = {}
     for name, (model, x_train, x_test) in models.items():
