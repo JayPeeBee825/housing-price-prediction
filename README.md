@@ -20,4 +20,4 @@ https://www.kaggle.com/competitions/house-prices-advanced-regression-techniques
 ## How to Run
 1. Make sure train.csv is in the same folder as main.py
 2. Run:
-   python main.py
+   python3 main.py
