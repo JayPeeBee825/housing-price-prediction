@@ -78,7 +78,7 @@ The Random Forest model was used to measure feature importance, identifying the 
 
 `OverallQual` was the strongest predictor, followed by `GrLivArea`, `TotalBsmtSF`, and `GarageCars`.
 
-![Random Forest Feature Importance](figures/feature_importance.png)
+![Random Forest Feature Importance](figures/random_forest_feature_importance.png)
 
 ---
 
