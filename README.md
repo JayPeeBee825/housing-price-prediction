@@ -121,7 +121,7 @@ Housing-Price-Prediction/
 Clone the repository:
 
 ```bash
-git clone https://github.com/JayPeeBee825/cs439-final-project
+git clone https://github.com/JayPeeBee825/house-price-prediction
 ```
 
 Navigate to the project directory:
