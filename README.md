@@ -127,7 +127,7 @@ git clone https://github.com/JayPeeBee825/house-price-prediction
 Navigate to the project directory:
 
 ```bash
-cd cs439-final-project
+cd house-price-prediction
 ```
 
 Install the required dependencies:
