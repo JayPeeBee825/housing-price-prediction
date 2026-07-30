@@ -5,9 +5,7 @@
 
 ## Overview
 
-This project applies machine learning techniques to predict residential housing prices using the Ames Housing dataset. The goal was to compare multiple regression models, evaluate their predictive performance, and identify the housing characteristics that have the greatest impact on sale price.
-
-The project includes a complete machine learning pipeline consisting of data preprocessing, feature engineering, model training, evaluation, and feature importance analysis.
+This project uses machine learning to predict housing sale prices from the Ames Housing dataset. Several regression models were trained and compared to evaluate their predictive accuracy while also identifying which housing features have the greatest influence on sale price. The project includes a complete machine learning pipeline consisting of data preprocessing, feature engineering, model training, evaluation, and feature importance analysis.
 
 ---
 
